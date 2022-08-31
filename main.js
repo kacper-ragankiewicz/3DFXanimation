@@ -4,7 +4,10 @@ import * as THREE from 'three';
 
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-
+import spaceImg from "./space.jpg";
+import normalImg from "./normal.jpg";
+import planetImg from "./planet.jpg";
+import groguImg from "./helmet_grogu.jpg";
 
 const scene = new THREE.Scene();
 
@@ -53,10 +56,10 @@ function addStar() {
 Array(200).fill().forEach(addStar)
 
 
-const spaceTexture = new THREE.TextureLoader().load('space.jpg');
+const spaceTexture = new THREE.TextureLoader().load(spaceImg);
 scene.background = spaceTexture;
 
-const grogTexture = new THREE.TextureLoader().load('helmet_grogu.jpg');
+const grogTexture = new THREE.TextureLoader().load(groguImg);
 
 const grogu = new THREE.Mesh(
   new THREE.BoxGeometry(3,3,3),
@@ -65,8 +68,8 @@ const grogu = new THREE.Mesh(
 
 scene.add(grogu);
 
-const planetTexture = new THREE.TextureLoader().load('planet.jpg');
-const normalTexture = new THREE.TextureLoader().load('nornal.jpg')
+const planetTexture = new THREE.TextureLoader().load(planetImg);
+const normalTexture = new THREE.TextureLoader().load(normalImg)
 
 const planet = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
