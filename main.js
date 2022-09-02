@@ -111,7 +111,7 @@ function animate() {
 
   sun.rotateY(0.004)
   mars.rotateY(0.004)
-  marsObj.rotateY(0.03)
+  marsObj.rotateY(0.04)
 
   renderer.render( scene, camera );
 }
